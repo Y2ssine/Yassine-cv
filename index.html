@@ -1,96 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="YassineMouihate" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://YassineMouihate.com" />
-  <link rel="icon" type="image/x-icon" href="96.png" />
-  <meta property="og:image" content="https://i.postimg.cc/6Qt5kSgz/top-logo.webp" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <meta property="og:description"
-    content="Welcome to my portfolio! My name is Yassine and I am an 24-year-old Full Stack Developer with a passion for creating innovative and user-friendly web applications. My skills include HTML, CSS, JavaScript, NodeJS and various frameworks and libraries. I have experience in both Front-End and Back-End development, which allows me to build dynamic and responsive websites that provide a seamless user experience.
-  
-  In addition to my technical skills, I also have experience working with Adobe Photoshop. I have been using this software for several years, and have developed a strong understanding of its features and capabilities. I am able to create visually appealing designs and graphics that enhance the overall look and feel of a website. I also have experience in photo editing, creating logos, and other graphics work.
-  
-  I am always striving to improve my skills and stay current with the latest technologies in order to provide the best possible solutions for my clients. I am confident that my technical skills and graphic design experience make me a valuable asset for any project. I am a quick learner and a team player, I have a keen attention to detail, and I am able to meet tight deadlines. I am also able to communicate effectively with clients, team members and other stakeholders. Please take a look at my portfolio to see some of my work and if you have any questions, don't hesitate to reach out to me." />
-  <title>Yassine - Portfolio</title>
-  <link rel="stylesheet" href="./style.css" type="text/css" />
-  <script src="https://kit.fontawesome.com/f334197832.js" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJD99TVLDM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-MJD99TVLDM');
-  </script>
-  <style>
-    body {
-      background-color: lightgreen;
-    }
-  </style>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yassine Mouihate - Full Stack Developer specializing in HTML, CSS, JavaScript, Node.js, Python, and Rust. Explore my portfolio showcasing web development projects and technical skills.">
+  <meta name="keywords" content="Yassine Mouihate, Full Stack Developer, Web Developer, JavaScript, Node.js, Python, Rust, HTML, CSS, Portfolio">
+  <meta name="author" content="Yassine Mouihate">
+  <meta property="og:title" content="Yassine Mouihate - Full Stack Developer Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://YassineMouihate.com">
+  <meta property="og:image" content="https://i.postimg.cc/6Qt5kSgz/top-logo.webp">
+  <meta property="og:description" content="Full Stack Developer specializing in JavaScript, Node.js, Python, and Rust. View my portfolio of web development projects.">
+  <title>Yassine Mouihate - Full Stack Developer Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="96.png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="./style.css" type="text/css">
+  <script src="https://kit.fontawesome.com/f334197832.js" crossorigin="anonymous" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-  <audio src="./tts.mp3" id="tts"></audio>
-  <img src="Me.png" class="face" alt="face" id="face" data-aos="fade-down" draggable="false">
+  <audio src="./tts.mp3" id="tts" aria-label="Text to speech audio"></audio>
+  <img src="Me.png" class="face" alt="Profile picture of Yassine Mouihate" id="face" data-aos="fade-down" draggable="false">
   <p id="assistance">Need Assistance?</p>
-  <div class="face-container" id="face-container"></div>
-  <div id="dialogue">
+  <div class="face-container" id="face-container" role="button" aria-label="Close assistant" tabindex="0"></div>
+  <div id="dialogue" role="dialog" aria-live="polite">
     <p id="dialogue-text"></p>
   </div>
   <div class="email nav-part">
     <p id="copied-text">Copied!</p>
-    <a id="email" href="#copyEmail" onclick="copyEmail()">Yassinemht0@gmail.com</a>
+    <a id="email" href="#copyEmail" onclick="copyEmail()" role="button" aria-label="Copy email address">Yassinemht0@gmail.com</a>
   </div>
 
-  <header class="heading" data-aos="fade-down">
+  <header class="heading" data-aos="fade-down" role="banner">
     <div class="status nav-part">
-      <a href="#status" id="status"></a>
+      <a href="#status" id="status" aria-label="Availability status"></a>
     </div>
-    <nav class="navigation nav-part">
+    <nav class="navigation nav-part" role="navigation" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#techs">Technologies</a>
       <a href="#social">Social</a>
     </nav>
   </header>
-  <main>
-    <section class="landing-section">
-      <div style="text-align: center;">
-        <h1 data-aos="fade-down">Yassine Mouihate</h1>
-        <h3 data-aos="fade-down">Software Developer</h3>
+  <main role="main">
+    <section class="landing-section" aria-labelledby="main-heading">
+      <div class="text-center-container">
+        <h1 id="main-heading" data-aos="fade-down">Yassine Mouihate</h1>
+        <h2 data-aos="fade-down">Software Developer</h2>
         <div class="landing-btns">
           <a class="special-btn" data-aos="fade-right" href="#about">About Me</a>
           <a class="special-btn terminal" data-aos="fade-left" href="/terminal">Terminal</a>
         </div>
       </div>
-      <div class="folder" data-aos="fade-right">
+      <div class="folder" data-aos="fade-right" role="complementary" aria-label="Project files">
         <div class="folder-close">
           <div class="folder-close-web">
             <div class="files-text">MY FILES</div>
           </div>
         </div>
-        <a href="#hobbies" id="ace" class="folder-card"><img draggable="false" width="300" src="./imgs/ace.webp"
-            alt="failed to load image" /></a>
-        <a href="#projects" class="folder-card" id="dev"><img draggable="false" width="300" src="./imgs/laptop.webp"
-            alt="failed to load image" /></a>
-        <a href="#about" class="folder-card" id="info"><img draggable="false" width="300" src="./imgs/info.webp"
-            alt="failed to load image" /></a>
+        <a href="#hobbies" id="ace" class="folder-card" aria-label="View hobbies section"><img draggable="false" width="300" src="./imgs/ace.webp" alt="Playing cards representing hobbies"></a>
+        <a href="#projects" class="folder-card" id="dev" aria-label="View projects section"><img draggable="false" width="300" src="./imgs/laptop.webp" alt="Laptop representing development projects"></a>
+        <a href="#about" class="folder-card" id="info" aria-label="View about section"><img draggable="false" width="300" src="./imgs/info.webp" alt="Information icon representing about section"></a>
       </div>
     </section>
-    <section class="about-section" id="about">
-      <h1 class="section-title" data-aos="fade-up">ABOUT ME</h1>
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <h2 class="section-title" data-aos="fade-up" id="about-title">ABOUT ME</h2>
       <div class="desc" data-aos="fade-down" id="about-me">
         <p>
-          <button class="special-btn" id="play-btn" href="#play">Play</button>Hi! I'm Yassine Mouihate, a <span id="age"></span>-year-old software developer passionate about tech and problem-solving.
+          <button class="special-btn" id="play-btn" href="#play" aria-label="Play introduction audio">Play</button>Hi! I'm Yassine Mouihate, a <span id="age"></span>-year-old software developer passionate about tech and problem-solving.
           <br><br>
           I specialize in front-end development with HTML, CSS, and JavaScript, and build back-end systems using Node.js, Bun, and Python. I'm also exploring Rust for high-performance applications.
           <br><br>
@@ -100,28 +78,28 @@
           <br><br>
           Feel free to check out my work or reach out—let’s build something great!
         </p>
-        <img draggable="false" width="300" src="./imgs/info.webp" alt="failed to load image" id="book-about" />
+        <img draggable="false" width="300" src="./imgs/info.webp" alt="Information book icon" id="book-about">
       </div>
     </section>
-    <section class="hobbies" id="hobbies">
-      <h1 class="section-title" data-aos="fade-down">HOBBIES</h1>
+    <section class="hobbies" id="hobbies" aria-labelledby="hobbies-title">
+      <h2 class="section-title" data-aos="fade-down" id="hobbies-title">HOBBIES</h2>
       <div class="hobbies-content">
         <div class="hobbies-cards ace-container" data-aos="fade-right">
-          <img id="ace-animation" src="./imgs/ace.webp" alt="ace" height="250" width="200">
+          <img id="ace-animation" src="./imgs/ace.webp" alt="Ace of spades playing card" height="250" width="200">
           <p>Cards</p>
         </div>
         <div class="hobbies-reading" data-aos="fade-right">
-          <img id="book-animation" src="./imgs/book-closed.webp" alt="ace" height="250" width="200">
+          <img id="book-animation" src="./imgs/book-closed.webp" alt="Closed book illustration" height="250" width="200">
           <p>Reading</p>
         </div>
         <div class="hobbies-sports" data-aos="fade-right">
-          <img id="runner-animation" src="./imgs/runner-frame1.webp" height="250" width="200" alt="running">
+          <img id="runner-animation" src="./imgs/runner-frame1.webp" height="250" width="200" alt="Running person illustration">
           <p>Running</p>
         </div>
       </div>
     </section>
-    <section class="projects" id="projects">
-      <h1 class="section-title" data-aos="fade-down">PROJECTS</h1>
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <h2 class="section-title" data-aos="fade-down" id="projects-title">PROJECTS</h2>
       <div class="projects-content" data-aos="fade-right">
         <div class="project">
           <h3 class="project-title">Blog API</h3>
@@ -138,13 +116,13 @@
           <p class="project-desc">a software to help High-School students save & track their progress.</p>
           <a href="...." target="_blank" class="special-btn">Check it out</a>
         </div>
-        <div onclick="takeToSite('https:\/\/github.com/y2ssine')" class="project see-more">
-          <h1 style="font-weight: 600;">See More &rarr;</h1>
+        <div onclick="takeToSite('https:\/\/github.com/y2ssine')" class="project see-more" role="button" tabindex="0" onkeypress="if(event.key==='Enter')takeToSite('https:\/\/github.com/y2ssine')">
+          <h3 class="see-more-heading">See More &rarr;</h3>
         </div>
       </div>
     </section>
-    <section class="techs" id="techs">
-      <h1 class="section-title" data-aos="fade-down">TECHNOLOGIES</h1>
+    <section class="techs" id="techs" aria-labelledby="techs-title">
+      <h2 class="section-title" data-aos="fade-down" id="techs-title">TECHNOLOGIES</h2>
       <h3 data-aos="fade-right">Languages</h3>
       <div class="techs-content">
         <div class="tech" data-aos="fade-up" id="tech1">HTML</div>
@@ -165,32 +143,21 @@
         <div class="tech" data-aos="fade-down">Docker</div>
       </div>
     </section>
-    <section class="social" id="social">
-      <h1 class="section-title" data-aos="fade-down">SOCIAL</h1>
+    <section class="social" id="social" aria-labelledby="social-title">
+      <h2 class="section-title" data-aos="fade-down" id="social-title">SOCIAL</h2>
       <div class="social-content">
-        <a data-aos="fade-up" href="mailto:Yassinemht0@gmail.com" target="_blank"><img draggable="false"
-            src="./imgs/gmail.webp" alt="your browser doesn't support this image"></a>
-        <a data-aos="fade-up" href="https://www.instagram.com/y2ssin.e/" target="_blank"><img
-            draggable="false" src="./imgs/instagram.webp" alt="your browser doesn't support this image"></a>
-        <a data-aos="fade-up" href="https://www.fiverr.com/" target="_blank"><img draggable="false"
-            src="./imgs/fiverr.webp" alt="your browser doesn't support this image"></a>
-        <a data-aos="fade-up" href="https://github.com/y2ssine" target="_blank"><img draggable="false"
-            src="./imgs/github.webp" alt="your browser doesn't support this image"></a>
-        <a data-aos="fade-up" href="https://www.linkedin.com/in/Yassine-Mouihate-9410a8251/" target="_blank"><img
-            draggable="false" src="./imgs/linkedin.webp" alt="your browser doesn't support this image"></a>
+        <a data-aos="fade-up" href="mailto:Yassinemht0@gmail.com" target="_blank" aria-label="Send email to Yassine"><img draggable="false" src="./imgs/gmail.webp" alt="Gmail icon"></a>
+        <a data-aos="fade-up" href="https://www.instagram.com/y2ssin.e/" target="_blank" aria-label="Visit Instagram profile"><img draggable="false" src="./imgs/instagram.webp" alt="Instagram icon"></a>
+        <a data-aos="fade-up" href="https://www.fiverr.com/" target="_blank" aria-label="Visit Fiverr profile"><img draggable="false" src="./imgs/fiverr.webp" alt="Fiverr icon"></a>
+        <a data-aos="fade-up" href="https://github.com/y2ssine" target="_blank" aria-label="Visit GitHub profile"><img draggable="false" src="./imgs/github.webp" alt="GitHub icon"></a>
+        <a data-aos="fade-up" href="https://www.linkedin.com/in/Yassine-Mouihate-9410a8251/" target="_blank" aria-label="Visit LinkedIn profile"><img draggable="false" src="./imgs/linkedin.webp" alt="LinkedIn icon"></a>
       </div>
     </section>
   </main>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      once: true,
-      duration: 600
-    });
-  </script>
+  <script src="./script.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJD99TVLDM"></script>
+  <script src="./analytics.js"></script>
 </body>
-
-<script src="./script.js"></script>
-
 </html>
