@@ -5,7 +5,11 @@
     --availability: transparent;
 }
 
-body::-webkit-scrollbar {
+body {
+    background-color: lightgreen;
+}
+
+body::-webkit-scrollbar{
     width: .7em;
     background-color: white;
 }
@@ -15,7 +19,16 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(98, 98, 98);
 }
 
-* {
+.text-center-container {
+  text-align: center;
+}
+
+.see-more-heading {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+*{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
